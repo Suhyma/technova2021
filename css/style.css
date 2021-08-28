@@ -1,0 +1,40 @@
+.tab-content {
+    position: relative;
+    overflow: hidden;
+  }
+  .tab-content.is-animating {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    width: auto;
+  }
+  
+  .content-pane {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .content-pane.is-active {
+    position: relative;
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .content-pane.is-exiting {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  .content-pane.is-animating {
+    -webkit-transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+    transition: opacity 400ms ease-out, -webkit-transform 400ms ease-out;
+    transition: opacity 400ms ease-out, transform 400ms ease-out;
+    transition: opacity 400ms ease-out, transform 400ms ease-out, -webkit-transform 400ms ease-out;
+  }
