@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,53 @@
     <link rel="stylesheet" href="css/style.css" media="screen">
     <title>You are gonna Popup on CHrome</title>
 </head>
+
 <body>
-    
-    <div class="container">
-        <div class="col">
-            <div class="row-4">
-                <h3>Hello World</h3>
+
+    <div id="wrapper">
+        <div class="container">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#tab1" class="text-uppercase">Home</a></li>
+                <li><a href="#tab2" class="text-uppercase">Habits</a></li>
+                <li><a href="#tab3" class="text-uppercase">Settings</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab1" class="content-pane is-active">
+                    <p>
+                        Tab 1 Content
+                    </p>
+                    <!-- /.login-box-body -->
+                </div>
+                <!-- /#tab1 -->
+
+                <div id="tab2" class="content-pane">
+                    <p>
+                        Tab 2 Content
+                    </p>
+                    <!-- /.form-box -->
+                </div>
+                <!-- /#tab2 -->
+
+                <div id="tab3" class="content-pane">
+                    <p>
+                        Tab 3 Content
+                    </p>
+                    <!-- /.form-box -->
+                </div>
+                <!-- /#tab2 -->
             </div>
-            <div class="row-4">
-                <h5 class="text-center">Your plant is thriving! Keep it up!</h5>
-            </div>
-            <br>
-            <div class="row-4">
-                <h3></h3>
-            </div>
-        </div>
+            <!-- /.tab-content -->
+        </div><!-- /.container -->
+
     </div>
+
+
 
     <!-- div.conta -->
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popup.js"></script>
 </body>
+
 </html>
