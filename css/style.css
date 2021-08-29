@@ -41,6 +41,14 @@
     transition: opacity 400ms ease-out, transform 400ms ease-out, -webkit-transform 400ms ease-out;
   }
 
+  .home-page {
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .habit-page {
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;

@@ -53,12 +53,55 @@ function decrementValue(idName){
 
 /* HABIT TRACKER SECTION FUNCTIONS */
 
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("incrementWater2");
+  if (el){
+      el.addEventListener("click", function() {
+          incrementValue("waterDrank")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("decrementWater2");
+  if (el){
+      el.addEventListener("click", function() {
+          decrementValue("waterDrank")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("incrementBreak2");
+  if (el){
+      el.addEventListener("click", function() {
+          incrementValue("breaksTaken")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("decrementBreak2");
+  if (el){
+      el.addEventListener("click", function() {
+          decrementValue("breaksTaken")});
+  }
+});
+
+var waterVal = 0;
+var waterGoal = parseInt(document.getElementById("water").value, 10);
+var waterAmount = parseInt(document.getElementById("waterDrank").value, 10);
+waterVal = waterAmount / waterGoal;
+
+var breakVal = 0;
+var breakGoal = parseInt(document.getElementById("break").value, 10);
+var breakAmount = parseInt(document.getElementById("breaksTaken").value, 10);
+breakVal = breakAmount / breakGoal;
+
+
 const progress = document.querySelector('.progress-done');
-progress.style.width = progress.getAttribute('data-done') + '%';
+progress.style.width = waterVal + '%';
 progress.style.opacity = 1;
 
 const progress2 = document.querySelector('.progress-done2');
-progress2.style.width = progress2.getAttribute('data-done') + '%';
+progress2.style.width = breakVal + '%';
 progress2.style.opacity = 1;
 
 const progress3 = document.querySelector('.progress-done3');
@@ -68,38 +111,6 @@ progress3.style.opacity = 1;
 const progress4 = document.querySelector('.progress-done4');
 progress4.style.width = progress4.getAttribute('data-done') + '%';
 progress4.style.opacity = 1;
-
-document.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById("incrementWater");
-  if (el){
-      el.addEventListener("click", function() {
-          incrementValue("waterDrank")});
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById("decrementWater");
-  if (el){
-      el.addEventListener("click", function() {
-          decrementValue("waterDrank")});
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById("incrementBreak");
-  if (el){
-      el.addEventListener("click", function() {
-          incrementValue("breaksTaken")});
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var el = document.getElementById("decrementBreak");
-  if (el){
-      el.addEventListener("click", function() {
-          decrementValue("breaksTaken")});
-  }
-});
 
 
 /* TABS */
