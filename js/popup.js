@@ -88,20 +88,21 @@ document.addEventListener('DOMContentLoaded', function() {
 var waterVal = 0;
 var waterGoal = parseInt(document.getElementById("water").value, 10);
 var waterAmount = parseInt(document.getElementById("waterDrank").value, 10);
-waterVal = waterAmount / waterGoal;
+waterVal = (waterAmount / waterGoal) * 100;
 
 var breakVal = 0;
 var breakGoal = parseInt(document.getElementById("break").value, 10);
 var breakAmount = parseInt(document.getElementById("breaksTaken").value, 10);
-breakVal = breakAmount / breakGoal;
-
+breakVal = (breakAmount / breakGoal) * 100;
 
 const progress = document.querySelector('.progress-done');
-progress.style.width = waterVal + '%';
+//progress.dataset.done = waterVal;
+progress.style.width = progress.getAttribute('data-done') + '%';
 progress.style.opacity = 1;
 
 const progress2 = document.querySelector('.progress-done2');
-progress2.style.width = breakVal + '%';
+//progress2.dataset.done = breakVal;
+progress2.style.width = progress2.getAttribute('data-done') + '%';
 progress2.style.opacity = 1;
 
 const progress3 = document.querySelector('.progress-done3');
