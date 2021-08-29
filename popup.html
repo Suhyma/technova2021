@@ -10,6 +10,14 @@
     <title>take care of yourself and plant</title>
 </head>
 
+<script>
+    var water_count = 0;
+    var snack_count = 0;
+    var break_count = 0;
+    var exercise_count = 0;
+    var average_count = 4;
+</script>
+
 <body>
 
     <div id="wrapper">
@@ -18,7 +26,17 @@
 
             <div class="tab-content">
                 <div id="home" class="content-pane is-active">
-                    <img src="images/bud.png">
+
+                    <img id="plant_state" src="images/bud.png"/>
+
+                    <script>
+                        const img = document.getElementById("plant_state");
+                        if (average_count >= 3 && average_count < 9) {
+                           img.src = "images/growing.png";
+                        } else if (average_count >= 9) {
+                            img.scr="images/full.png";
+                        }
+                    </script>
                     <p>
                         your plant is feeling... 
                         <br>
@@ -63,6 +81,9 @@
                 <!-- /#habits -->
 
                 <div id="settings" class="content-pane">
+                    <script>
+                        var 
+                    </script>
                     <p>
                         Tab 3 Content
                     </p>
