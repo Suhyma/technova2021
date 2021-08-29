@@ -3,6 +3,13 @@
 $('body').css('width', `${screen.width/2.5}`);
 'use strict';
 
+const progress = document.querySelector('.progress-done');
+
+setTimeout(() => {
+  progress.style.opacity = 1;
+  progress.style.width = progress.getAttribute('data-done') + '%';
+}, 500)
+
 const Tabs = {
   init() {
     let promise = $.Deferred();

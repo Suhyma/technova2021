@@ -38,3 +38,54 @@
     transition: opacity 400ms ease-out, transform 400ms ease-out;
     transition: opacity 400ms ease-out, transform 400ms ease-out, -webkit-transform 400ms ease-out;
   }
+
+  .habit-page {
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress {
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    height: 15px;
+    width: 300px;
+  }
+  .progress-done {
+    background: linear-gradient(to left, #F2709C, #FF9472);   
+    border-radius: 20px;
+    display: flex;
+	  align-items: center;
+	  justify-content: center;
+    height: 100%;
+    width: 100px;
+    opacity: 1;
+    /*transition: 1s ease; */
+  }
+
+  .progress-done2 {
+    background: linear-gradient(to left, #F2709C, #FF9472);   
+    border-radius: 20px;
+    display: flex;
+	  align-items: center;
+	  justify-content: center;
+    height: 100%;
+    width: 100px;
+    opacity: 1;
+    /*transition: 1s ease; */
+  }
+
+  .progress-done3 {
+    background: linear-gradient(to left, #F2709C, #FF9472);   
+    border-radius: 20px;
+    display: flex;
+	  align-items: center;
+	  justify-content: center;
+    height: 100%;
+    width: 150px;
+    opacity: 1;
+    /*transition: 1s ease; */
+  }
+  
