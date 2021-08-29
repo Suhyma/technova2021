@@ -13,7 +13,7 @@
 <script>
     var water_count = 10;
     var break_count = 10;
-    var average_count = (water_count + break_count)/2;
+    var average_count = (water_count + break_count) / 2;
     var water_goal = 5;
     var break_goal = 5;
     var sad = (water_goal + break_goal) * 0.3;
@@ -36,7 +36,7 @@
                             img.src = "images/bud.png";
                         } else if (average_count >= sad && average_count < okay) {
                             img.src = "images/growing.png";
-                        } else if (average_count >=  okay && average_count <= happy) {
+                        } else if (average_count >= okay && average_count <= happy) {
                             img.src = "images/full.png";
                         }
                     </script>
@@ -51,25 +51,25 @@
                 <!-- /#home -->
 
                 <div id="habits" class="content-pane habit-page container-fluid">
-                    <img id="plant_stateh" src="images/bud.png"/>
+                    <img id="plant_stateh" src="images/bud.png" />
                     <script>
                         const imgh = document.getElementById("plant_stateh");
                         if (average_count < sad) {
                             imgh.src = "images/bud.png";
                         } else if (average_count >= sad && average_count < okay) {
                             imgh.src = "images/growing.png";
-                        } else if (average_count >=  okay && average_count <= happy) {
+                        } else if (average_count >= okay && average_count <= happy) {
                             imgh.src = "images/full.png";
                         }
                     </script>
-                    
+
                     <p>
                         <b>Let's track the habits we're working on together here! </b>
                     </p>
 
                     <div class="row container-fluid">
                         <div class="col-4 h6 container-fluid" style="margin-top: 3%;"> Drinking water </div>
-                        
+
                         <div id="habit1" class="col-8 container-fluid progress">
                             <div class="row container-fluid progress-done" data-done="70">
                                 70%
@@ -83,10 +83,10 @@
                         <input type="text" id="waterDrank" value="0"/>
                         <input type="button" id="incrementWater2" value="+"/>
                     </form>
-                   
+
                     <div class="row container-fluid">
                         <div class="col-4 h6 container-fluid" style="margin-top: 3%;"> Taking breaks </div>
-                        
+
                         <div id="habit2" class="col-8 container-fluid progress">
                             <div class="row container-fluid progress-done2" data-done="30">
                                 30%
@@ -127,22 +127,29 @@
                 </div>
                 <!-- /#habits -->
 
-                <div id="settings" class="content-pane">
+                <div id="settings" class="content-pane settings-page">
                     <p>
                         Goals
                     </p>
                     <form>
-                        <p># of Cups of Water</p>
-                        <input type="button" id="decrementWater" value="-" />
-                        <input type="text" id="water" value="0" />
-                        <input type="button" id="incrementWater" value="+" />
-
-                        <p># of Breaks</p>
-                        <input type="button" id="decrementBreak" value="-" />
-                        <input type="text" id="break" value="0" />
-                        <input type="button" id="incrementBreak" value="+" />
+                        <div class="row container-fluid float-container">
+                            <div class="float-child1"> 
+                                <p style="margin-bottom:30px;"># of Cups of Water 💧</p>
+                                <p># of Breaks ✨</p>
+                            </div>
+                            <div class="float-child2">
+                                <input type="button" id="decrementWater" value="-" />
+                                <input type="text" id="water" value="0" size="2"/>
+                                <input type="button" id="incrementWater" value="+" />
+                                <br>
+                                <br>
+                                <input type="button" id="decrementBreak" value="-" />
+                                <input type="text" id="break" value="0" size="2"/>
+                                <input type="button" id="incrementBreak" value="+" />
+                            </div>
+                        </div>
                     </form>
-                    <!-- /.form-box -->
+
                 </div>
                 <!-- /#settings -->
             </div>
