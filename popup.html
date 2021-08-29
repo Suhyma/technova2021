@@ -51,7 +51,18 @@
                 <!-- /#home -->
 
                 <div id="habits" class="content-pane habit-page container-fluid">
-                    <img src="images/bud.png">
+                    <img id="plant_stateh" src="images/bud.png"/>
+                    <script>
+                        const imgh = document.getElementById("plant_stateh");
+                        if (average_count < sad) {
+                            imgh.src = "images/bud.png";
+                        } else if (average_count >= sad && average_count < okay) {
+                            imgh.src = "images/growing.png";
+                        } else if (average_count >=  okay && average_count <= happy) {
+                            imgh.src = "images/full.png";
+                        }
+                    </script>
+                    
                     <p>
                         Let's track the habits we're working on together here!
                     </p>
