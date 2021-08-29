@@ -29,7 +29,7 @@
 
             <div class="tab-content">
                 <div id="home" class="content-pane is-active home-page">
-                    <img id="plant_state" src="images/bud.png"/>
+                    <img id="plant_state" src="images/bud.png" />
                     <script>
                         const img = document.getElementById("plant_state");
                         if (average_count < sad) {
@@ -41,10 +41,24 @@
                         }
                     </script>
 
-                    <p>
-                        <b> your plant is feeling... </b>
-                        <br>
-                        track your habits and keep your plant happy :)
+
+                    <p id="status"><b>your plant is feeling</b></p>
+                    <script>
+                        var text = document.getElementById("status");
+                        if (average_count < sad) {
+                            var state = document.createTextNode(" sad");
+                            text.appendChild(state);
+                        } else if (average_count >= sad && average_count < okay) {
+                            var state = document.createTextNode(" okay");
+                            text.appendChild(state);
+                        } else if (average_count >= okay && average_count <= happy) {
+                            var state = document.createTextNode(" happy");
+                            text.appendChild(state);
+                        }
+                    </script>
+
+                    
+                    <p> track your habits and keep your plant happy :)
                     </p>
                     <!-- /.login-box-body -->
                 </div>
@@ -79,9 +93,9 @@
                     </div>
                     <form>
                         <p># of Cups of Water</p>
-                        <input type="button" id="decrementWater2" value="-"/>
-                        <input type="text" id="waterDrank" value="0"/>
-                        <input type="button" id="incrementWater2" value="+"/>
+                        <input type="button" id="decrementWater2" value="-" />
+                        <input type="text" id="waterDrank" value="0" />
+                        <input type="button" id="incrementWater2" value="+" />
                     </form>
 
                     <div class="row container-fluid">
@@ -96,9 +110,9 @@
                     </div>
                     <form>
                         <p># of Breaks</p>
-                        <input type="button" id="decrementBreak2" value="-"/>
-                        <input type="text" id="breaksTaken" value="0"/>
-                        <input type="button" id="incrementBreak2" value="+"/>
+                        <input type="button" id="decrementBreak2" value="-" />
+                        <input type="text" id="breaksTaken" value="0" />
+                        <input type="button" id="incrementBreak2" value="+" />
                     </form>
 
                     <div class="row container-fluid">
