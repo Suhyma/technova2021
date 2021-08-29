@@ -70,3 +70,13 @@
     opacity: 0;
     transition: 1s ease 0.3s;
   }
+
+  img {
+    justify-content: center;
+    width:  100px;
+    height: 150px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+        box-shadow: 5px 5px 0 #FF6078;
+}

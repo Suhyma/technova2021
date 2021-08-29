@@ -11,36 +11,40 @@
 </head>
 
 <script>
-    var water_count = 0;
-    var snack_count = 0;
-    var break_count = 0;
-    var exercise_count = 0;
-    var average_count = 4;
+    var water_count = 10;
+    var break_count = 10;
+    var average_count = (water_count + break_count)/2;
+    var water_goal = 5;
+    var break_goal = 5;
+    var sad = (water_goal + break_goal) * 0.3;
+    var okay = (water_goal + break_goal) * 0.7;
+    var happy = (water_goal + break_goal);
 </script>
 
 <body>
 
     <div id="wrapper">
         <div class="container">
-            
+
 
             <div class="tab-content">
                 <div id="home" class="content-pane is-active">
-
                     <img id="plant_state" src="images/bud.png"/>
-
                     <script>
                         const img = document.getElementById("plant_state");
-                        if (average_count >= 3 && average_count < 9) {
-                           img.src = "images/growing.png";
-                        } else if (average_count >= 9) {
-                            img.scr="images/full.png";
+                        if (average_count < sad) {
+                            img.src = "images/bud.png";
+                        } else if (average_count >= sad && average_count < okay) {
+                            img.src = "images/growing.png";
+                        } else if (average_count >=  okay && average_count <= happy) {
+                            img.src = "images/full.png";
                         }
                     </script>
+
                     <p>
-                        your plant is feeling... 
+                        your plant is feeling...
                         <br>
-                         track your habits and keep your plant happy :)
+                        track your habits and keep your plant happy :)
                     </p>
                     <!-- /.login-box-body -->
                 </div>
@@ -54,7 +58,7 @@
 
                     <div class="row container-fluid">
                         <div class="col-4 h6 container-fluid" style="margin-top: 3%;"> Habit 1 </div>
-                        
+
                         <div id="habit1" class="col-8 container-fluid progress">
                             <div class="row container-fluid progress-done" data-done="70">
                                 70%
@@ -62,10 +66,10 @@
                             <br>
                         </div>
                     </div>
-                   
+
                     <div class="row container-fluid">
                         <div class="col-4 h6 container-fluid" style="margin-top: 3%;"> Habit 2 </div>
-                        
+
                         <div id="habit2" class="col-8 container-fluid progress">
                             <div class="row container-fluid progress-done2" data-done="30">
                                 30%
@@ -74,7 +78,7 @@
                         </div>
                     </div>
 
-                    <div class="row container-fluid"> 
+                    <div class="row container-fluid">
                         <div class="col-4 h6 container-fluid" style="margin-top: 3%;"> Habit 3 </div>
 
                         <div id="habit3" class="col-8 container-fluid progress">
@@ -95,7 +99,7 @@
                             <br>
                         </div>
                     </div>
-        
+
                     <!-- /.form-box -->
                 </div>
                 <!-- /#habits -->
@@ -106,14 +110,14 @@
                     </p>
                     <form>
                         <p># of Cups of Water</p>
-                        <input type="button" id="decrementWater" value="-"/>
-                        <input type="text" id="water" value="0"/>
-                        <input type="button" id="incrementWater" value="+"/>
+                        <input type="button" id="decrementWater" value="-" />
+                        <input type="text" id="water" value="0" />
+                        <input type="button" id="incrementWater" value="+" />
 
                         <p># of Breaks</p>
-                        <input type="button" id="decrementBreak" value="-"/>
-                        <input type="text" id="break" value="0"/>
-                        <input type="button" id="incrementBreak" value="+"/>
+                        <input type="button" id="decrementBreak" value="-" />
+                        <input type="text" id="break" value="0" />
+                        <input type="button" id="incrementBreak" value="+" />
                     </form>
                     <!-- /.form-box -->
                 </div>
@@ -122,8 +126,8 @@
             <!-- /.tab-content -->
             <ul class="nav nav-tabs nav-justified">
                 <li class="active"><a href="#home" class="text-uppercase">Home</a></li>
-                <li><a href="#habits" class="text-uppercase">Habits 
-                </a></li>
+                <li><a href="#habits" class="text-uppercase">Habits
+                    </a></li>
                 <li><a href="#settings" class="text-uppercase">Settings</a></li>
             </ul>
         </div><!-- /.container -->
