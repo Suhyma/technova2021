@@ -3,6 +3,8 @@
 $('body').css('width', `${screen.width/2.5}`);
 'use strict';
 
+/*GOALS SECTION FUNCTIONS*/
+
 document.addEventListener('DOMContentLoaded', function() {
     var el = document.getElementById("incrementWater");
     if (el){
@@ -49,6 +51,8 @@ function decrementValue(idName){
     document.getElementById(idName).value = value;
 }
 
+/* HABIT TRACKER SECTION FUNCTIONS */
+
 const progress = document.querySelector('.progress-done');
 progress.style.width = progress.getAttribute('data-done') + '%';
 progress.style.opacity = 1;
@@ -64,6 +68,41 @@ progress3.style.opacity = 1;
 const progress4 = document.querySelector('.progress-done4');
 progress4.style.width = progress4.getAttribute('data-done') + '%';
 progress4.style.opacity = 1;
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("incrementWater");
+  if (el){
+      el.addEventListener("click", function() {
+          incrementValue("waterDrank")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("decrementWater");
+  if (el){
+      el.addEventListener("click", function() {
+          decrementValue("waterDrank")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("incrementBreak");
+  if (el){
+      el.addEventListener("click", function() {
+          incrementValue("breaksTaken")});
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var el = document.getElementById("decrementBreak");
+  if (el){
+      el.addEventListener("click", function() {
+          decrementValue("breaksTaken")});
+  }
+});
+
+
+/* TABS */
 
 const Tabs = {
   init() {
