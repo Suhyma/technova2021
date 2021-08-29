@@ -3,31 +3,57 @@
 $('body').css('width', `${screen.width/2.5}`);
 'use strict';
 
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById("incrementWater");
+    if (el){
+        el.addEventListener("click", function() {
+            incrementValue("water")});
+    }
+  });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById("incrementBreak");
+    if (el){
+        el.addEventListener("click", function() {
+            incrementValue("break")});
+    }
+  });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById("decrementWater");
+    if (el){
+        el.addEventListener("click", function() {
+            decrementValue("water")});
+    }
+  });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var el = document.getElementById("decrementBreak");
+    if (el){
+        el.addEventListener("click", function() {
+            decrementValue("break")});
+    }
+  });
+
+function incrementValue(idName){
+        var value = parseInt(document.getElementById(idName).value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById(idName).value = value;
+}
+
+function decrementValue(idName){
+    var value = parseInt(document.getElementById(idName).value, 10);
+    value = isNaN(value) ? 0 : value;
+    value--;
+    document.getElementById(idName).value = value;
+}
 const progress = document.querySelector('.progress-done');
-const progress2 = document.querySelector('.progress-done2');
-const progress3 = document.querySelector('.progress-done3');
-const progress4 = document.querySelector('.progress-done4');
 
 setTimeout(() => {
   progress.style.opacity = 1;
   progress.style.width = progress.getAttribute('data-done') + '%';
 }, 500)
-
-setTimeout(() => {
-  progress2.style.opacity = 1;
-  progress2.style.width = progress2.getAttribute('data-done') + '%';
-}, 500)
-
-setTimeout(() => {
-  progress3.style.opacity = 1;
-  progress3.style.width = progress3.getAttribute('data-done') + '%';
-}, 500)
-
-setTimeout(() => {
-  progress4.style.opacity = 1;
-  progress4.style.width = progress4.getAttribute('data-done') + '%';
-}, 500)
-
 
 const Tabs = {
   init() {
