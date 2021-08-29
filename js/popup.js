@@ -4,11 +4,30 @@ $('body').css('width', `${screen.width/2.5}`);
 'use strict';
 
 const progress = document.querySelector('.progress-done');
+const progress2 = document.querySelector('.progress-done2');
+const progress3 = document.querySelector('.progress-done3');
+const progress4 = document.querySelector('.progress-done4');
 
 setTimeout(() => {
   progress.style.opacity = 1;
   progress.style.width = progress.getAttribute('data-done') + '%';
 }, 500)
+
+setTimeout(() => {
+  progress2.style.opacity = 1;
+  progress2.style.width = progress2.getAttribute('data-done') + '%';
+}, 500)
+
+setTimeout(() => {
+  progress3.style.opacity = 1;
+  progress3.style.width = progress3.getAttribute('data-done') + '%';
+}, 500)
+
+setTimeout(() => {
+  progress4.style.opacity = 1;
+  progress4.style.width = progress4.getAttribute('data-done') + '%';
+}, 500)
+
 
 const Tabs = {
   init() {
