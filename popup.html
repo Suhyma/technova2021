@@ -141,31 +141,43 @@
                 </div>
                 <!-- /#habits -->
 
-                <div id="settings" class="content-pane">
+                <div id="settings" class="content-pane settings-page">
                     <p>
                         Goals
                     </p>
                     <form>
-                        <p># of Cups of Water</p>
-                        <input type="button" id="decrementWater" value="-" />
-                        <input type="text" id="water" value="0" />
-                        <input type="button" id="incrementWater" value="+" />
-
-                        <p># of Breaks</p>
-                        <input type="button" id="decrementBreak" value="-" />
-                        <input type="text" id="break" value="0" />
-                        <input type="button" id="incrementBreak" value="+" />
+                        <div class="row container-fluid float-container">
+                            <div class="float-child1"> 
+                                <p style="margin-bottom:30px;"># of Cups of Water 💧</p>
+                                <p># of Breaks ✨</p>
+                            </div>
+                            <div class="float-child2">
+                                <input type="button" id="decrementWater" value="-" />
+                                <input type="text" id="water" value="0" size="2"/>
+                                <input type="button" id="incrementWater" value="+" />
+                                <br>
+                                <br>
+                                <input type="button" id="decrementBreak" value="-" />
+                                <input type="text" id="break" value="0" size="2"/>
+                                <input type="button" id="incrementBreak" value="+" />
+                            </div>
+                        </div>
                     </form>
-                    <!-- /.form-box -->
+
                 </div>
                 <!-- /#settings -->
             </div>
             <!-- /.tab-content -->
-            <ul class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#home" class="text-uppercase">Home</a></li>
-                <li><a href="#habits" class="text-uppercase">Habits
-                    </a></li>
-                <li><a href="#settings" class="text-uppercase">Settings</a></li>
+            <ul class="nav nav-tabs justify-content-center bNav nav-fill">
+                <li class="active nav-item">
+                    <a href="#home" class="text-uppercase">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#habits" class="text-uppercase">Habits</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="text-uppercase">Settings</a>
+                </li>
             </ul>
         </div><!-- /.container -->
 

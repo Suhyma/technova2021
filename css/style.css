@@ -56,6 +56,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  .settings-page{
+    font-family: 'Montserrat', sans-serif;
+  }
   
   .progress {
     background-color: #d8d8d8;
@@ -87,4 +91,23 @@
     margin-bottom: 50px;
     border-radius: 10px;
         box-shadow: 5px 5px 0 #FF6078;
+}
+
+.float-container {
+    padding: 20px;
+}
+
+.float-child1 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+}  
+.float-child2 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+} 
+
+.bNav {
+    padding: 20px;
 }
